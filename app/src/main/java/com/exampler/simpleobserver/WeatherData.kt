@@ -8,31 +8,32 @@ class WeatherData : Subject {
     private var humidity = 0.0
     private var pressure = 0.0
 
-    fun weatherData() {
+    init {
         observers = ArrayList()
     }
 
     override fun registerObserver(o: Observer) {
         observers!!.add(o)
-        Log.d(TAG,"registerObserver")
+        Log.d(TAG,"registerObserver ${o}")
     }
 
     override fun removeObserver(o: Observer) {
         val i = observers?.indexOf(o)
         if (i != null && i >= 0) observers?.removeAt(i)
-        Log.d(TAG,"removeObserver")
+        Log.d(TAG,"removeObserver $o")
     }
 
 
     override fun notifyObserver() {
-        Log.d(TAG,"notifyObserver()")
+//        Log.d(TAG,"notifyObserver()")
         for (i in observers!!.indices) {
+            Log.d(TAG,"${observers!![i]} t:$temperature, h:$humidity, p:$pressure")
             observers!![i].update(temperature, humidity, pressure)
         }
     }
 
     private fun measurementChanged() {
-        Log.d(TAG,"measurementChanged()")
+//        Log.d(TAG,"measurementChanged()")
         notifyObserver()
     }
 
@@ -40,7 +41,7 @@ class WeatherData : Subject {
         this.temperature = temperature
         this.humidity = humidity
         this.pressure= pressure
-        Log.d(TAG,"setMeasurements")
+        Log.d(TAG,"setMeasurements: t:$temperature, h:$humidity, p:$pressure")
         measurementChanged()
 
     }

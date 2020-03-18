@@ -7,8 +7,21 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/et_inputValue"
-        android:layout_width="match_parent"
+        android:id="@+id/et_temperature"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="3"
+        android:hint="temp"
+        app:layout_constraintBottom_toTopOf="@+id/bt_setValue"
+        app:layout_constraintEnd_toStartOf="@+id/et_humidity"
+        app:layout_constraintStart_toStartOf="parent" />
+    <EditText
+        android:id="@+id/et_humidity"
+        android:layout_width="100dp"
+        android:hint="humidity"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:gravity="center"
@@ -18,24 +31,53 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/et_pressure"
+        android:layout_width="100dp"
+        android:hint="pressure"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/bt_setValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_humidity" />
+
     <Button
         android:id="@+id/bt_setValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:text="set value"
-        app:layout_constraintBottom_toTopOf="@+id/tv_result"
+        app:layout_constraintBottom_toTopOf="@+id/tv_CurrentConditions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_result"
+        android:id="@+id/tv_CurrentConditions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="result"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ForecastDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_CurrentConditions" />
+
+    <TextView
+        android:id="@+id/tv_StatisticsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ForecastDisplay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
