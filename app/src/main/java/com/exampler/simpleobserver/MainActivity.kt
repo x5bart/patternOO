@@ -1,6 +1,9 @@
 package com.exampler.simpleobserver
 
+import android.content.Context
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,18 +18,19 @@ class MainActivity : AppCompatActivity() {
     private var temperature = 0.0
     private var humidity = 0.0
     private var pressure = 0.0
-    lateinit var tv_CC: TextView
-    lateinit var resultDisplay: String
+    lateinit var view: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        view = findViewById(R.id.tv_CurrentConditions)
         weatherData = WeatherData()
         forecastDisplay = ForecastDisplay(weatherData)
         currentDisplay = CurrentConditionsDisplay(weatherData)
         statisticsDisplay = StatisticsDisplay(weatherData)
 
-        tv_CC = findViewById(R.id.tv_CurrentConditions)
+
+
 
         bt_setValue.setOnClickListener {
             temperature = et_humidity.text.toString().toDouble()
@@ -38,10 +42,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun updateCurrentDisplay(resultDisplay: String) {
-        this.resultDisplay = resultDisplay
-        tv_CurrentConditions.text = resultDisplay
+    override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
+
+        return super.onCreateView(name, context, attrs)
+
     }
+    fun updateCurrentDisplay(resultDisplay: String) {
+        view = findViewById(R.id.tv_CurrentConditions)
+        view.text = resultDisplay
 
-
+    }
 }
