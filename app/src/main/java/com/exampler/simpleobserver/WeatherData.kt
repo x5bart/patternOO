@@ -1,6 +1,5 @@
 package com.exampler.simpleobserver
 
-import android.util.Log
 
 class WeatherData : Subject {
     private var observers: ArrayList<Observer>? = null
@@ -14,20 +13,20 @@ class WeatherData : Subject {
 
     override fun registerObserver(o: Observer) {
         observers!!.add(o)
-        Log.d(TAG,"registerObserver ${o}")
+//        Log.d(TAG,"registerObserver ${o}")
     }
 
     override fun removeObserver(o: Observer) {
         val i = observers?.indexOf(o)
         if (i != null && i >= 0) observers?.removeAt(i)
-        Log.d(TAG,"removeObserver $o")
+//        Log.d(TAG,"removeObserver $o")
     }
 
 
     override fun notifyObserver() {
 //        Log.d(TAG,"notifyObserver()")
         for (i in observers!!.indices) {
-            Log.d(TAG,"${observers!![i]} t:$temperature, h:$humidity, p:$pressure")
+//            Log.d(TAG,"${observers!![i]} t:$temperature, h:$humidity, p:$pressure")
             observers!![i].update(temperature, humidity, pressure)
         }
     }
@@ -41,7 +40,7 @@ class WeatherData : Subject {
         this.temperature = temperature
         this.humidity = humidity
         this.pressure= pressure
-        Log.d(TAG,"setMeasurements: t:$temperature, h:$humidity, p:$pressure")
+//        Log.d(TAG,"setMeasurements: t:$temperature, h:$humidity, p:$pressure")
         measurementChanged()
 
     }

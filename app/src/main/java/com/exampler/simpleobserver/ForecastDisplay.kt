@@ -1,12 +1,14 @@
 package com.exampler.simpleobserver
 
-import android.util.Log
+import android.content.Context
+import kotlinx.android.synthetic.main.activity_main.*
 
 
-class ForecastDisplay(weatherData: WeatherData): Observer, DisplayElement {
+class ForecastDisplay(weatherData: WeatherData, context: Context) : Observer, DisplayElement {
 
     private var currentPressure = 29.92
     private var lastPressure = 0.0
+    private var context: MainActivity = context as MainActivity
 
 
     init {
@@ -14,25 +16,29 @@ class ForecastDisplay(weatherData: WeatherData): Observer, DisplayElement {
     }
 
     override fun update(temp: Double, humidity: Double, pressure: Double) {
-        Log.d(TAG,"update ForecastDisplay")
+//        Log.d(TAG,"update ForecastDisplay")
         lastPressure = currentPressure
         currentPressure = pressure
         display()
     }
 
     override fun display() {
+        var resultDisplay = ""
         val t = "Forecast:"
+        var tmp = ""
         when {
             currentPressure > lastPressure -> {
-                Log.d(TAG,"$t Improving weather on the way!")
+                tmp = "$t Improving weather on the way!"
             }
             currentPressure == lastPressure -> {
-                Log.d(TAG,"$t More of the same")
+                tmp = "$t More of the same"
             }
             currentPressure < lastPressure -> {
-                Log.d(TAG,"$t Watch out for cooler, rainy weather")
+                tmp = "$t Watch out for cooler, rainy weather"
             }
         }
+        resultDisplay = tmp
+        context.tv_ForecastDisplay.text = resultDisplay
     }
 
 
