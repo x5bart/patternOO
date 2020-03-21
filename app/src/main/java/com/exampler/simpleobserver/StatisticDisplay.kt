@@ -3,7 +3,7 @@ package com.exampler.simpleobserver
 import android.content.Context
 import kotlinx.android.synthetic.main.activity_main.*
 
-class StatisticsDisplay(weatherData: WeatherData,context: Context) : Observer, DisplayElement {
+class StatisticsDisplay(context: Context) : Observer, DisplayElement {
     private var maxTemp = 0.0
     private var minTemp = 200.0
     private var tempSum = 0.0
@@ -29,7 +29,5 @@ class StatisticsDisplay(weatherData: WeatherData,context: Context) : Observer, D
         context.tv_StatisticsDisplay.text = resultDisplay
     }
 
-    init {
-        weatherData.registerObserver(this)
-    }
+
 }

@@ -6,6 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <CheckBox
+        android:id="@+id/cb_currentConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="CurrentConditions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_forecastDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ForecastDisplay"
+        app:layout_constraintStart_toStartOf="@+id/cb_currentConditions"
+        app:layout_constraintTop_toBottomOf="@+id/cb_currentConditions" />
+
+    <CheckBox
+        android:id="@+id/cb_statisticsDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StatisticsDisplay"
+        app:layout_constraintStart_toStartOf="@+id/cb_forecastDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/cb_forecastDisplay" />
+
+    <CheckBox
+        android:id="@+id/cb_heatIndexDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HeatIndexDisplay"
+        app:layout_constraintStart_toStartOf="@+id/cb_statisticsDisplay"
+        app:layout_constraintTop_toBottomOf="@+id/cb_statisticsDisplay" />
+
     <EditText
         android:id="@+id/et_temperature"
         android:layout_width="100dp"
@@ -61,6 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -70,6 +105,7 @@
         android:id="@+id/tv_ForecastDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_CurrentConditions" />
@@ -78,8 +114,19 @@
         android:id="@+id/tv_StatisticsDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_ForecastDisplay" />
+
+    <TextView
+        android:id="@+id/tv_heatIndexDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_StatisticsDisplay" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

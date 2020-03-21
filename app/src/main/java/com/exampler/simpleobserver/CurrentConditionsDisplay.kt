@@ -5,7 +5,7 @@ import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class CurrentConditionsDisplay(weatherData: WeatherData, context: Context) : Observer,
+class CurrentConditionsDisplay( context: Context) : Observer,
     DisplayElement {
     private var temperature = 0.0
     private var humidity = 0.0
@@ -13,12 +13,16 @@ class CurrentConditionsDisplay(weatherData: WeatherData, context: Context) : Obs
 
 
     init {
-        weatherData.registerObserver(this)
+        WeatherData(context)
     }
 
-    fun remove(weatherData: WeatherData) {
-        weatherData.removeObserver(this)
-    }
+//    fun add() {
+//        context.weatherData.registerObserver(this)
+//    }
+//
+//    fun remove() {
+//        context.weatherData.removeObserver(this)
+//    }
 
     override fun update(temp: Double, humidity: Double, pressure: Double) {
         Log.d(
@@ -37,7 +41,7 @@ class CurrentConditionsDisplay(weatherData: WeatherData, context: Context) : Obs
 
     override fun display() {
         val resultDisplay = "Current conditions $temperature F degrees and humidity + % $humidity"
-            context.tv_CurrentConditions.text = resultDisplay
+        context.tv_CurrentConditions.text = resultDisplay
     }
 }
 

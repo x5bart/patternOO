@@ -4,16 +4,12 @@ import android.content.Context
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class ForecastDisplay(weatherData: WeatherData, context: Context) : Observer, DisplayElement {
+class ForecastDisplay( context: Context) : Observer, DisplayElement {
 
     private var currentPressure = 29.92
     private var lastPressure = 0.0
     private var context: MainActivity = context as MainActivity
 
-
-    init {
-        weatherData.registerObserver(this)
-    }
 
     override fun update(temp: Double, humidity: Double, pressure: Double) {
 //        Log.d(TAG,"update ForecastDisplay")
