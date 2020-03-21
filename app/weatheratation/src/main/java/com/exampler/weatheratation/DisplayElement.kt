@@ -1,4 +1,4 @@
-package com.exampler.simpleobserver
+package com.exampler.weatheratation
 
 
 interface DisplayElement {

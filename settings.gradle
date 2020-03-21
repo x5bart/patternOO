@@ -1,2 +1,3 @@
 rootProject.name='SimpleObserver'
 include ':app'
+include ':app:weatheratation'
