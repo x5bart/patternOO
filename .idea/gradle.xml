@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app/weatheratation" />
             <option value="$PROJECT_DIR$/p02_observable" />
             <option value="$PROJECT_DIR$/p02_observer" />
+            <option value="$PROJECT_DIR$/p03_decorator_starbuzz" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
