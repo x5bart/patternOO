@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">03_Decorator_starbuzz</string>
+    <string name="beverage">Beverage</string>
+    <string name="condiment">Condiment</string>
+    <string name="dark_roast">Dark Roast</string>
+    <string name="decaf">Decaf</string>
+    <string name="espresso">Espresso</string>
+    <string name="house_blend">House Blend</string>
+    <string name="mocha">Mocha</string>
+    <string name="soy">Soy</string>
+    <string name="result">Result</string>
+    <string name="whip">Whip</string>
+    <string name="add_beverage">Add Beverage</string>
 </resources>

@@ -4,15 +4,151 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="16dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_titleBeverage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/beverage"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_darkRoast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dark_roast"
+        app:layout_constraintEnd_toEndOf="@+id/btn_houseBlend"
+        app:layout_constraintStart_toStartOf="@+id/btn_houseBlend"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titleBeverage" />
+
+
+    <Button
+        android:id="@+id/btn_decaf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/decaf"
+        app:layout_constraintEnd_toEndOf="@+id/btn_darkRoast"
+        app:layout_constraintStart_toStartOf="@+id/btn_darkRoast"
+        app:layout_constraintTop_toBottomOf="@+id/btn_darkRoast" />
+
+    <Button
+        android:id="@+id/btn_espresso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/espresso"
+        app:layout_constraintEnd_toEndOf="@+id/btn_darkRoast"
+        app:layout_constraintStart_toStartOf="@+id/btn_darkRoast"
+        app:layout_constraintTop_toBottomOf="@+id/btn_decaf" />
+
+    <Button
+        android:id="@+id/btn_houseBlend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/house_blend"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_espresso" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/tv_titleCondiment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/condiment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_mocha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mocha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/btn_darkRoast" />
+
+    <Button
+        android:id="@+id/btn_soy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/soy"
+        app:layout_constraintEnd_toEndOf="@+id/btn_mocha"
+        app:layout_constraintStart_toStartOf="@+id/btn_mocha"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mocha" />
+
+    <Button
+        android:id="@+id/btn_whip"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/whip"
+        app:layout_constraintEnd_toEndOf="@+id/btn_mocha"
+        app:layout_constraintStart_toStartOf="@+id/btn_mocha"
+        app:layout_constraintTop_toBottomOf="@+id/btn_soy" />
+
+    <TextView
+        android:id="@+id/tv_preResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_houseBlend" />
+
+    <Button
+        android:id="@+id/btn_addBeverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="350dp"
+        android:text="@string/add_beverage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_addBeverage" />
+
+    <TextView
+        android:id="@+id/tv_sumCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
