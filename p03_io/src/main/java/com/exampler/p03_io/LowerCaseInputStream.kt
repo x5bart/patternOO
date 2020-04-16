@@ -17,7 +17,7 @@ class LowerCaseInputStream(inputStream: InputStream?) : FilterInputStream(inputS
         val result = `in`.read(b, offset, len)
         for (i in offset until offset + result) {
             b[i] = Character.toLowerCase(b[i].toChar()).toByte()
-            
+
         }
         return result
     }
