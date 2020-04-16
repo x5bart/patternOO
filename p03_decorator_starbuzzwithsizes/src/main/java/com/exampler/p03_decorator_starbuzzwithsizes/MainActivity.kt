@@ -1,10 +1,10 @@
-package com.exampler.a03_decorator_starbuzz
+package com.exampler.p03_decorator_starbuzzwithsizes
 
 import android.annotation.SuppressLint
-import android.os.Bundle
-import android.view.View.*
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 const val TAG = "Mylog"
@@ -88,49 +88,49 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun showCondiments() {
-        btn_mocha.visibility = VISIBLE
-        btn_soy.visibility = VISIBLE
-        btn_whip.visibility = VISIBLE
-        btn_milk.visibility = VISIBLE
+        btn_mocha.visibility = View.VISIBLE
+        btn_soy.visibility = View.VISIBLE
+        btn_whip.visibility = View.VISIBLE
+        btn_milk.visibility = View.VISIBLE
     }
 
     private fun hideCondiments() {
-        btn_mocha.visibility = GONE
-        btn_soy.visibility = GONE
-        btn_whip.visibility = GONE
-        btn_milk.visibility = GONE
+        btn_mocha.visibility = View.GONE
+        btn_soy.visibility = View.GONE
+        btn_whip.visibility = View.GONE
+        btn_milk.visibility = View.GONE
     }
 
     fun hideBeverage(view: Button) {
         when (view) {
             btn_darkRoast -> {
-                btn_decaf.visibility = INVISIBLE
-                btn_espresso.visibility = INVISIBLE
-                btn_houseBlend.visibility = INVISIBLE
+                btn_decaf.visibility = View.INVISIBLE
+                btn_espresso.visibility = View.INVISIBLE
+                btn_houseBlend.visibility = View.INVISIBLE
             }
             btn_decaf -> {
-                btn_darkRoast.visibility = INVISIBLE
-                btn_espresso.visibility = INVISIBLE
-                btn_houseBlend.visibility = INVISIBLE
+                btn_darkRoast.visibility = View.INVISIBLE
+                btn_espresso.visibility = View.INVISIBLE
+                btn_houseBlend.visibility = View.INVISIBLE
             }
             btn_espresso -> {
-                btn_darkRoast.visibility = INVISIBLE
-                btn_decaf.visibility = INVISIBLE
-                btn_houseBlend.visibility = INVISIBLE
+                btn_darkRoast.visibility = View.INVISIBLE
+                btn_decaf.visibility = View.INVISIBLE
+                btn_houseBlend.visibility = View.INVISIBLE
             }
             btn_houseBlend -> {
-                btn_darkRoast.visibility = INVISIBLE
-                btn_decaf.visibility = INVISIBLE
-                btn_espresso.visibility = INVISIBLE
+                btn_darkRoast.visibility = View.INVISIBLE
+                btn_decaf.visibility = View.INVISIBLE
+                btn_espresso.visibility = View.INVISIBLE
             }
         }
     }
 
     fun showBeverage() {
-        btn_darkRoast.visibility = VISIBLE
-        btn_decaf.visibility = VISIBLE
-        btn_espresso.visibility = VISIBLE
-        btn_houseBlend.visibility = VISIBLE
+        btn_darkRoast.visibility = View.VISIBLE
+        btn_decaf.visibility = View.VISIBLE
+        btn_espresso.visibility = View.VISIBLE
+        btn_houseBlend.visibility = View.VISIBLE
     }
 
     @SuppressLint("SetTextI18n")

@@ -7,5 +7,16 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    
+    <style name="BtnCondiment" parent="TextAppearance.AppCompat.Button">
+        <item name="android:backgroundTint">@color/btn_condiment</item>
+    </style>
+    <style name="BtnBeverage" parent="TextAppearance.AppCompat.Button">
+        <item name="android:backgroundTint">@color/btn_beverage</item>
+    </style>
+
+    <style name="NotActive" parent="TextAppearance.AppCompat.Button">
+        <item name="android:state_active">false</item>
+    </style>
 
 </resources>
