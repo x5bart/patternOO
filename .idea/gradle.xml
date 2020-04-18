@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/p02_observer" />
             <option value="$PROJECT_DIR$/p03_decorator_starbuzz" />
             <option value="$PROJECT_DIR$/p03_io" />
+            <option value="$PROJECT_DIR$/p04_factory_simple_pizza" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
