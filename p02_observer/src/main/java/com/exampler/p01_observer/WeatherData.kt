@@ -44,18 +44,18 @@ class WeatherData(context: Context) : Subject {
 //        Log.d(TAG,"removeObserver $o")
 //    }
 
-   override fun removeObserver(o: Observer) {
-       val observer = o.toString().substringAfter("simpleobserver.").substringBefore("@")
+    override fun removeObserver(o: Observer) {
+        val observer = o.toString().substringAfter("simpleobserver.").substringBefore("@")
         val isContains = observers!!.toString().contains(observer)
 
         val i = observers!!.indexOf(o)
-       Log.d(TAG,"removeObserver $o")
-       Log.d(TAG, "removeObserver i:$i o:$observers")
-       Log.d(TAG, "removeObserver i:$i o:$observer isContains:$isContains")
+        Log.d(TAG, "removeObserver $o")
+        Log.d(TAG, "removeObserver i:$i o:$observers")
+        Log.d(TAG, "removeObserver i:$i o:$observer isContains:$isContains")
         if (i >= 0) {
             observers!!.removeAt(i)
         }
-       Log.d(TAG, "removeObserver i:$i o:$observers")
+        Log.d(TAG, "removeObserver i:$i o:$observers")
     }
 
     override fun notifyObserver() {

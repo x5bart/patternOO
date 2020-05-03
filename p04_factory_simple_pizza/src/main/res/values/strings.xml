@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">p04_factory_simple_Pizza</string>
+    <string name="preparing">Preparing</string>
 </resources>
