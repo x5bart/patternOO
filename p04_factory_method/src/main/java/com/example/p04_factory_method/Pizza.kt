@@ -1,5 +1,7 @@
 package com.example.p04_factory_method
 
+import android.util.Log
+
 abstract class Pizza {
     var pizzaName: String? = null
     var dough: String? = null
@@ -7,25 +9,25 @@ abstract class Pizza {
     var toppings = ArrayList<String>()
 
     fun prepare() {
-        println("Prepare $pizzaName")
-        println("Tossing dough...")
-        println("Adding sauce...")
-        println("Adding toppings: ")
+        Log.d(TAG,"Prepare $pizzaName")
+        Log.d(TAG,"Tossing dough...")
+        Log.d(TAG,"Adding sauce...")
+        Log.d(TAG,"Adding toppings: ")
         for (topping in toppings) {
-            println("   $topping")
+            Log.d(TAG,"   $topping")
         }
     }
 
     fun bake() {
-        println("Bake for 25 minutes at 350")
+        Log.d(TAG,"Bake for 25 minutes at 350")
     }
 
     open fun cut() {
-        println("Cut the pizza into diagonal slices")
+        Log.d(TAG,"Cut the pizza into diagonal slices")
     }
 
     fun box() {
-        println("Place pizza in official PizzaStore box")
+        Log.d(TAG,"Place pizza in official PizzaStore box")
     }
 
     fun getName(): String? {

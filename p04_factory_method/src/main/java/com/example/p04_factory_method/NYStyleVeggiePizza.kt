@@ -4,7 +4,7 @@ import android.R.attr.name
 
 
 class NYStyleVeggiePizza:Pizza() {
-    fun NYStyleVeggiePizza() {
+    init{
         pizzaName = "NY Style Veggie Pizza"
         dough = "Thin Crust Dough"
         sauce = "Marinara Sauce"

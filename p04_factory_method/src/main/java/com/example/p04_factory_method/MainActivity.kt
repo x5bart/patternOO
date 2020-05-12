@@ -1,8 +1,11 @@
 package com.example.p04_factory_method
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
+
+const val TAG = "Mylogs"
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,30 +15,33 @@ class MainActivity : AppCompatActivity() {
 
         val nyStore = NYPizzaStore()
         val chicagoStore = ChicagoPizzaStore()
+        val moscowStore = MoscowPizzaStore()
 
         var pizza = nyStore.orderPizza("cheese")
-        println("""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
 
         pizza = chicagoStore.orderPizza("cheese")
-        println("""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
 
         pizza = nyStore.orderPizza("clam")
-        println("""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
 
         pizza = chicagoStore.orderPizza("clam")
-        println("""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
 
         pizza = nyStore.orderPizza("pepperoni")
-        println("""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
 
         pizza = chicagoStore.orderPizza("pepperoni")
-        println("""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
 
         pizza = nyStore.orderPizza("veggie")
-        println("""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
 
         pizza = chicagoStore.orderPizza("veggie")
-        println("""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
+        Log.d(TAG,"""Joel ordered a ${pizza!!.pizzaName}""".trimIndent())
 
+        pizza = moscowStore.orderPizza("cheese")
+        Log.d(TAG,"""Ethan ordered a ${pizza!!.pizzaName}""".trimIndent())
     }
 }

@@ -1,10 +1,11 @@
 package com.example.p04_factory_method
 
 import android.R.attr.name
+import android.util.Log
 
 
 class ChicagoStyleClamPizza:Pizza() {
-    fun ChicagoStyleClamPizza() {
+    init{
         pizzaName = "Chicago Style Clam Pizza"
         dough = "Extra Thick Crust Dough"
         sauce = "Plum Tomato Sauce"
@@ -13,6 +14,6 @@ class ChicagoStyleClamPizza:Pizza() {
     }
 
     override fun cut() {
-        println("Cutting the pizza into square slices")
+        Log.d(TAG,"Cutting the pizza into square slices")
     }
 }
