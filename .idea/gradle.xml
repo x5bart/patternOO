@@ -21,6 +21,8 @@
             <option value="$PROJECT_DIR$/p04_factory_method" />
             <option value="$PROJECT_DIR$/p04_factory_simple_pizza" />
             <option value="$PROJECT_DIR$/p05_singleton_classic" />
+            <option value="$PROJECT_DIR$/p06_command_simple_remote" />
+            <option value="$PROJECT_DIR$/p06_command_simple_remote_wl" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

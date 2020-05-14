@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_check" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_lightsOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lights on" />
+
+        <RadioButton
+            android:id="@+id/rb_lightsOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lights off" />
+
+        <RadioButton
+            android:id="@+id/rb_garageDoorOpen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Garage door open" />
+
+        <RadioButton
+            android:id="@+id/rb_garageDoorClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Garage door Close" />
+
+        <RadioButton
+            android:id="@+id/rb_garageDoorStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Garage door stop" />
+
+        <RadioButton
+            android:id="@+id/rb_garageDoorLightsOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Garage lights on" />
+
+        <RadioButton
+            android:id="@+id/rb_garageDoorLightsOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Garage lights pff" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Check"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
