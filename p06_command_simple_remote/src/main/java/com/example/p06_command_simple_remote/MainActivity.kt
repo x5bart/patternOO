@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
         bt_check.setOnClickListener {
             checkSlot()
             remote.setCommand(slot)
-            val result = remote.buttonWasPressed()
-            tv_result.text = result
+            tv_result.text = remote.buttonWasPressed()
         }
     }
 
